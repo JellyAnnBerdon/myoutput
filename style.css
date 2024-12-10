@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+
+.main {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(media/a.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+    font-family: sans-serif;
+}
+
+.navbar {
+    width: 95%;
+    height: auto;
+    margin-right: 30px;
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 40px;
+    font-family: cursive;
+    float: left;
+    padding-top: .6%;
+    cursor: pointer;
+}
+
+.menu {
+    width: 600px;
+    float: left;
+    height: 70px;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    align-self: center;
+    margin-left: 14%;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #ff7200;
+}
+
+.search-box {
+    float: right;
+    width: 240px;
+    background: #fff;
+    height: 30px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-top: 1%;
+    margin-right: 2%;
+}
+
+.search-box .search-txt {
+    width: 190px;
+    padding: 0 6px;
+}
+
+.search-btn {
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .6px;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    cursor: pointer;
+    font-family: cursive;
+    color: #fff;
+    font-size: 85px;
+}
+
+.button {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.form-container {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 350px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    display: none; 
+    z-index: 1000;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form-toggle .active {
+    background: #ff7200;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.form input {
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ff7200;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form input:focus {
+    border-bottom: 2px solid #fff;
+}
+
+.form button {
+    padding: 10px;
+    background: #ff7200;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.form button:hover {
+    background: #ffa333;
+}
+
+.form .link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form .link a {
+    text-decoration: none;
+    color: #ff7200;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.form .link a:hover {
+    color: #ffa333;
+}
+
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        right: 5%;
+        top: 80px;
+        padding: 15px;
+    }
+
+    .form-toggle button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        top: 80px;
+        right: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .form-toggle button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .form input {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .form button {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+
+.sub-main {
+    height: 10vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url(media/2.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #000;
+    
+}
+
+.sub-main h1 {
+    margin-top: 100px;
+    
+}
+
+
+.about-article{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about-article h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-article p{
+    margin-bottom: 15px;
+}
+
+
+
+.about-col {
+    flex: 1; 
+    margin-right: 10px; 
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.about-article {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: flex-start; 
+    padding: 180px;
+    gap: 10px; 
+}
+
+.about-article p {
+    width: 500px; 
+}
+
+.about-col img {
+    max-width: 100%; 
+    height: auto;    
+    width: 500px;    
+    margin-bottom: 10px; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000; 
+    color: #ff7200; 
+    border-top: 2px solid #ddd;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+label {
+    font-size: 16px;  
+    color: #fff;      
+    margin-top: 10px;  
+    cursor: pointer;  
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;  
+    transform: scale(1.2); 
+    vertical-align: middle; 
+}
+
+label:hover {
+    color: #ffa333;  
+}
+
+
+@media screen and (max-width:1200px) {
+    /*Normal Screen*/
+
+    .navbar{
+        width: 100%;
+        height: 100px;
+    }
+    ul{
+        margin-left: 30px;
+    }   
+    ul li{
+        margin-left: 60px;
+    }
+    ul li a{
+       font-size: 1.6vw; 
+    }
+    .search{
+        margin-top: 3px;
+        margin-left: 290px;
+    }
+    .srch{
+        height: 40px;
+        width: 190px;
+        font-size: 14px;
+    }
+    .btn{
+        height:40px;
+        width: 80px;
+    }
+    .content{
+        width: 100%;
+    }
+    .content h1, .content span{
+        font-size: 4.5vw; 
+    }
+    .content .par{
+        width: 90%;
+        font-size: 1.5vw;
+    }
+    .content .cn{
+        width: 13%;
+        height: 3.5vw;
+        font-size: 1.8vw;
+    }
+    .content a{
+        font-size: 1.6vw
+    }
+}
+
+@media screen and (max-width:1170px) {
+    /*Login-box*/
+    .main{
+        padding-left: 20px;
+        height: 180vh;
+    }
+    .form{
+        margin-left: -30px;
+        width: 250px;
+        height: 370px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+        position: absolute;
+        top: 420px;
+        left: 50px;
+        transform: translate(0%,-5%);
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .form input{
+        width: 240px;
+        height: 35px;
+        background: transparent;
+        border-bottom: 1px solid #ff7200;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        font-family: sans-serif;
+    }
+    .btnn a{
+        font-size: 16px;
+    }
+    .form .link a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 830px){
+    /*For tablet*/
+   
+    .content{
+        margin-top: 120px;
+        width: 80%;   
+        margin-left: 40px;  
+    }
+    .content h1, .content span{
+        font-size: 6vw; 
+    }
+    .content .par{
+        width: 90%;
+        font-size: 1.8vw;
+    }
+    .content .cn{
+        width: 15%;
+        height: 4.5vw;
+        font-size: 2vw;
+    }
+    .content a{
+        font-size: 2vw
+    }
+    .logo{
+        margin-left: 240px;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 5vw;
+    }
+    .menu{
+        width: 100%;
+    }
+    ul{
+        margin-top: -5px;
+        margin-left: 5px;
+    }
+    ul li{
+        margin-left: 60px;
+    }
+    ul li a{
+       font-size: 2vw; 
+    }
+    .search{
+        margin-top: -20px;
+        margin-left: 60px;   
+    }   
+    .srch{
+        height: 30px;
+        width: 160px;
+        font-size: 12px;
+    }
+    .btn{
+        height:30px;
+        width: 70px;
+    }
+    .main{
+        padding-left: 20px;
+        height: 180vh;
+    }
+    .form{
+        margin-left: -30px;
+        width: 250px;
+        height: 370px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+        position: absolute;
+        top: 430px;
+        left: 50px;
+        transform: translate(0%,-5%);
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .form input{
+        width: 240px;
+        height: 35px;
+        background: transparent;
+        border-bottom: 1px solid #ff7200;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        font-family: sans-serif;
+    }
+    .btnn a{
+        font-size: 16px;
+    }
+    .form .link a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    /*IPAD*/
+    
+    .content{
+        margin-top: 80px;
+        margin-left: 20px;
+    }
+    .search{
+        margin-top: -40px;
+        margin-left: 42px;
+    }
+    .logo{
+        margin-left: 180px;
+        font-size: 4vw;
+    }
+    ul{
+        margin-top: -25px;
+        margin-left: -5px;
+    }
+    ul li {
+        margin-left: 50px;
+    }
+    ul li a{
+        font-size: 2vw;
+    }   
+}
+
+@media screen and (max-width: 450px){
+    /*mobile*/
+    .logo{
+        margin-left: 140px;
+        font-size: 4vw;
+    }
+    ul{
+        margin-top: -25px;
+    }
+    ul li {
+        margin-left: 42px;
+    }
+    ul li a{
+        font-size: 2vw;
+    }  
+    .search{
+        margin-top: -40px;
+        margin-left: 38px;
+    } 
+
+}
